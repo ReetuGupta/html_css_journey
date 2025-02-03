@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Serif Todhri", serif;
+}
+
+#wrapper{
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    height: 100vh;
+    perspective: 500px;
+}
+
+.main-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+
+.background , .foreground{
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.background{
+    transform: translateZ(-400px) scale(2);
+    
+}
+
+.foreground{
+    transform: translateZ(-100px) scale(1);
+    top: 20%;
+    left: -10%;
+}
+
+.cloud1, .cloud2{
+    position: absolute;
+}
+
+.cloud1{
+    top: 35%;
+    left: 40%;
+    width: 5%;
+    opacity: 1;
+    animation: move 25s 10 alternate linear; 
+    transform: translateZ(-10px) scale(1);
+}
+
+@keyframes move {
+    0%{
+        transform: translateX(0);
+    }
+
+    100%{
+        transform: translateX(10vw);
+    }
+}
+
+.cloud2{
+    top: 30%;
+    left: 30%;
+    width: 6%;
+    opacity: 1;
+    animation: move1 25s 10 alternate linear;
+    transform: translateZ(-10px) scale(1);
+}
+
+@keyframes move1 {
+    0%{
+        transform: translateX(0);
+    }
+
+    100%{
+        transform: translateX(20vw);
+    }
+}
+
+.main-heading {
+    position: absolute;
+    top: 40%;
+    left: 55%;
+    font-size: 5rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: 0.05em;
+    line-height: 6.5rem;
+    text-shadow: 7px 7px 10px grey ;
+    color:#226387;
+}
+
+span{
+    margin-left: -15%;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.bg{
+    position: relative;
+    height: 32rem;
+    background-attachment: fixed;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg1{
+    background-image: url(/images/biking.jpg);
+}
+
+.bg2{
+    background-image: url(/images/iceclimbing.jpg);
+}
+
+.bg3{
+    background-image: url(/images/paragliding.jpg);
+}
+
+.bg4{
+    background-image: url(/images/canyoning.jpg);
+}
+
+.bg5{
+    background-image: url(/images/rockclimbing.jpg);
+}
+
+.bg6{
+    background-image: url(/images/trekking.jpg);
+}
+
+.about{
+    background-color: #edededc8;
+    color: #226387;
+    position: relative;
+}
+
+.about-heading{
+    font-size: 4rem;
+    padding-top: 1.6rem;
+    margin: 0 auto;
+    text-align: center;
+    letter-spacing: .05em;
+    text-shadow: 0 0 10px grey;
+}
+
+.description{
+    padding: 2.5rem;
+    text-align: justify;
+    line-height: 1.5rem;
+    text-shadow: 0 0 50px grey;
+    letter-spacing: .03em;
+}
+
+.sub-heading{
+    position: absolute;
+    top: 50%;
+    background-color: #226387;
+    color: white;
+    font-size: 2.5rem;
+    padding: 1rem;
+    letter-spacing: .1em;
+    text-shadow: 0 0 10px black;
+}
+
+.left{
+    left: 10%;
+}
+
+.right{
+    right: 10%;
+}
+
+.bookmark {
+    position: fixed;
+    background-color: #226387;
+    font-size: 1rem; 
+    display: flex;
+    justify-content: space-between;
+    gap: .5rem; 
+    bottom: 1%;
+    left: 40%; 
+    width: 60%; 
+    opacity: .9;
+}
+
+.bookmark a {
+    text-decoration: none;
+    color: white;
+    padding: .5rem 1rem;
+    background-color: #226487;
+    border-radius: 10%;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+    font-weight: lighter;
+    letter-spacing: .05em;
+}
+
+.bookmark a:hover {
+    background-color: #1a4f63;
+    font-weight: 550;
+}
+
+.footer{
+    height: 5rem;
+    background-color: #226487;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.faded-txt{
+    position: absolute;
+    font-size: 1.5rem;
+    top:20%;
+    left: 10%;
+    color: #0a3e53;
+    user-select: none;
+    letter-spacing: 0.1em;
+    font-weight: 800;
+    text-shadow: 5px 5px 20px;
+}
+
+.icons{
+    position: absolute;
+    right: 10%;
+}
+
+.icons a{
+    padding: 0 .8rem;
+    text-decoration: none;
+    color:#fff;
+    font-size: 2rem;
+    transition: all 0.3s;
+}
+ .icons a:hover i{
+    transform: scale(1.1);
+ }
+
