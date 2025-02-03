@@ -1,0 +1,112 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+#face{
+    height: 400px;
+    width: 400px;
+    background-color: #FFD700;
+    border-radius: 50%;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+#mouth{
+    height: 40px;
+    width: 200px;
+    background-color: #8B4513;
+    border-radius: 20px;
+    position: absolute;
+    top: 280px;
+    left: 105px;
+    transition: all 0.3s ease;
+}
+
+#right, #left{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: #8B4513;
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+#right{
+    left: 270px;
+    top: 130px;
+}
+
+#left{
+    left: 80px;
+    top: 130px;
+}
+
+h1 {
+    text-align: center; 
+    padding: 0;
+}
+
+#face:hover #mouth{
+    height: 120px;
+    width: 300px;
+    background-color: #8B4513;
+    border-radius: 0 0 150px 150px;
+    position: absolute;
+    top: 230px;
+    left: 50px;
+}
+
+#face:hover #right{
+    top: 80px;
+}
+
+#face:hover #left{
+    top: 80px;
+}
+
+@media (max-width: 500px) {
+    #face {
+        width: 250px;
+        height: 250px;
+    }
+
+    #mouth {
+        width: 120px;
+        left: 65px;
+        top: 180px;
+    }
+
+    #right, #left {
+        width: 40px;
+        height: 40px;
+        top: 90px;
+    }
+
+    #right {
+        left: 170px;
+    }
+
+    #left {
+        left: 40px;
+    }
+
+    #face:hover #mouth {
+        height: 80px;
+        width: 180px;
+        border-radius: 0 0 90px 90px;
+        top: 150px;
+        left: 35px;
+    }
+
+    #face:hover #right,
+    #face:hover #left {
+        top: 60px;
+    }
+    
+} 

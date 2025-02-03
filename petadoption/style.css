@@ -1,0 +1,72 @@
+h2 {
+    color: red;
+    font-style: italic;
+}
+
+span {
+    color: brown;
+}
+
+#pets {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+.card {
+    width: 400px;
+    height: 500px;
+    border: 2px solid black;
+    border-radius: 25px;
+    padding: 3px;
+    margin: 10px;
+    transition: box-shadow 0.5s ease, transform 0.2s ease;
+}
+
+img {
+    width: 100%;
+    border-radius: 10% 10% 0 0;
+    height: 60%;
+}
+
+h3 {
+    text-align: center;
+}
+
+.pet-info h2 {
+    text-align: center;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px black;
+    transform: scale(1.03); /* Slight pop effect */
+}
+
+p {
+    text-align: justify;
+}
+
+h4 {
+    text-align: end;
+    color: green;
+    font-style: italic;
+}
+
+a {
+    text-decoration: none;
+    color: red;
+    cursor: pointer;
+}
+
+a:hover {
+    color: darkred;
+    text-decoration: underline;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 500px) {
+    #pets {
+        flex-direction: column;
+        align-items: center;
+    }
+}
